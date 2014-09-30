@@ -10,7 +10,6 @@ public class CollectionUtils {
 		Object o = 5;
 		Object i = null;
 		List list = new ArrayList();
-		Object[] ob = new Object[]{5,i,5};
 		list.add(0, 5);
 		list.add(1, i);
 		list.add(2, 5);
