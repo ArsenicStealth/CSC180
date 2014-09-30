@@ -14,6 +14,10 @@ public class CollectionUtils {
 		list.add(0, 5);
 		list.add(1, i);
 		list.add(2, 5);
+		List l = new ArrayList();
+		//null
+		System.out.println(cardinality(o, l));
+		// not null
 		System.out.println(cardinality(o, list));
 	}
 	public static int cardinality(Object obj, Collection col){
@@ -21,7 +25,6 @@ public class CollectionUtils {
 		Iterator it = col.iterator();
 		while(it.hasNext()){
 			Object ob = it.next();
-			System.out.println(ob);
 			if(ob == obj){
 				numobjects++;
 			}
