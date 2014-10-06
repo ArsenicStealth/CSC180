@@ -35,7 +35,7 @@ public class Auction {
 	this.currentBid = currentBid;
 	}
 	public String toString(){
-		return "";
+		return this.id + " " + this.currentBid + " " + this.name;
 	}
 	public boolean equals(Object obj){
 		return equals((Auction)obj);
