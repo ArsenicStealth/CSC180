@@ -66,7 +66,7 @@ public class Auction {
 	}
 	
 	public String toString(){
-		return this.id + " " + this.currentBid + " " + this.name;
+		return this.id + " " + this.currentBid + " " + this.name + " " + this.properties;
 	}
 	
 	public boolean equals(Object obj){

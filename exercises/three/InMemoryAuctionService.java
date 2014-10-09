@@ -55,7 +55,7 @@ public class InMemoryAuctionService implements AuctionService {
 	@Override
 	public Auction create(Auction auction) {
 		// creates new auction with the values from the
-//		passed in auction. then returns the new auction.
+		//passed in auction. then returns the new auction.
 		Auction newAuc = new Auction(
 				auction.getId(),
 				auction.getName(),
