@@ -14,9 +14,9 @@ public class SearchResultsState implements Event  {
 			
 				try {
 					if(auction.getOwner() != null){
-						System.out.println(auction.getId() + "\t" + auction.getName() + "\t$" + auction.getCurrentBid() + "\t" + auction.getOwner());
+						System.out.println(auction.getId() + "\t" + auction.getName() + "\t$" + auction.getCurrentBid() + "\t" + auction.getOwner() + "\t" + auction.getDescription());
 					}else{
-						System.out.println(auction.getId() + "\t" + auction.getName() + "\t$" + auction.getCurrentBid());
+						System.out.println(auction.getId() + "\t" + auction.getName() + "\t$" + auction.getCurrentBid() + "\t" + auction.getDescription());
 					}
 				} catch (NullPointerException e) {
 					
