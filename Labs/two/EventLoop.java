@@ -3,8 +3,8 @@ import java.util.Queue;
 
 public class EventLoop {
 	public Queue<State> Q1 = new LinkedList<State>();
-	 public Queue<State> Q2 = new LinkedList<State>();
-	 public Queue<State> Q3 = new LinkedList<State>();
+//	 public Queue<State> Q2 = new LinkedList<State>();
+//	 public Queue<State> Q3 = new LinkedList<State>();
 
 	InMemoryAuctionService memory = new InMemoryAuctionService();
 
@@ -17,8 +17,8 @@ public class EventLoop {
 	public void Begin() {
 
 		Queue<State> ToDo = Q1;
-		 Queue<State> Done = Q2;
-		 Queue<State> Temp = Q3;
+//		 Queue<State> Done = Q2;
+//		 Queue<State> Temp = Q3;
 
 		DefaultState Def = new DefaultState();
 		UserHomeState Home = new UserHomeState();
@@ -70,10 +70,10 @@ public class EventLoop {
 				}
 				if (event.next() != null) {
 					ToDo.add(state);
-
-					 Temp = ToDo;
-					 ToDo = Done;
-					 Done = Temp;
+//
+//					 Temp = ToDo;
+//					 ToDo = Done;
+//					 Done = Temp;
 				}
 			}
 		}
