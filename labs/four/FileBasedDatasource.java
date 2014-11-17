@@ -20,26 +20,24 @@ public class FileBasedDatasource {
 		catch(Exception e){
 		}
 		if(def.UserInput.equals(auc.getCreate())){
-			System.out.println("It appears that you have created one or more items in the search results, would you like to edit/delete an item (y/n)");
+			System.out.println(" you created one or more of the items in the search results would you like to edit or delete an item (y for yes/n for no)");
 			String userInput = null;
 			userInput = scan.nextLine();
 			if(userInput.equalsIgnoreCase("y")){
 				//Iterates through and checks to see if they were the creator or not then prints that out
-				System.out.println("Type in the id of the item to edit.");
+				System.out.println("what is the id of the item you want to edit.");
 				int id = 0;
 				input = scan.nextLine();
 				id = Integer.parseInt(input);
-				System.out.println("Do you want to edit the 1)name, 2)description, 3)end date, 4)price or 5)delete.");
+				System.out.println("want part would you like to edit the 1)name, 2)description, 3)end date, 4)price 5)delete.");
 				input = scan.nextLine();
 				if(input.equalsIgnoreCase("1")){
 					if(auc.getCreate().equals(def.UserInput) && auc.getOwner() == null){
-						System.out.println("The current name is \"" + auc.getName() + "\" type in the new name.");
-
-						System.out.print("Type in the new name: ");
+						System.out.println("The current name is \"" + auc.getName() + "\" what would you like the new name to be.");
 						IMAS.update(auc, id);
 						input = scan.nextLine();
 						auc.setName(input);
-						System.out.println("The new name is \"" + auc.getName() + "\".");
+						System.out.println("you changed the name to \"" + auc.getName() + "\".");
 					}
 					else{
 						System.out.println("You are not the owner of the selected item or a bid was already placed on the item.");
